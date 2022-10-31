@@ -50,25 +50,27 @@ namespace exercise2
             Aida[x] = Aida[y];
             Aida[y] = temp;
         }
-        public void q_short(int low, int high)
+        public void q_sort(int low, int high, int mid)
         {
-            int pivot, i, AF;
+            int pivot, i, AF, k;
             if (low >= high) 
                 return;
+            
 
             //Partition the list into two parts:
             //one containing elements less that or equal to pivot
             //Outher containing elements greather than pivot
 
             i = low;
-            AF = high;
+            AF = mid + 1;
+            k = low;
 
-            pivot = Aida[low];
+            pivot = Aida[mid];
 
-            while (i <= AF)
+            while (k <= AF)
             {
                 //search for an elements greater than pivot
-                while ((Aida[i] <= pivot) && (i <= high))
+                while ((Aida[i] <= Aida[k]) && (i <= high))
                 {
                     i++;
                     cmp_count++;
@@ -91,8 +93,31 @@ namespace exercise2
                     mov_count++;
                 }
             }
+            //AF now contains the index of thelast element in the sorted list
+
+            if (Aida[low] <= Aida[AF])
+            {
+
+                //Move the pivot to its correct position in the list
+                swap(low, AF);
+                mov_count++;
+            }
+           
         }
-        
+        void display()
+        {
+            Console.WriteLine("\n---------------------");
+            Console.WriteLine("Sorted Array elements");
+            Console.WriteLine("\n---------------------");
+
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(Aida[j]);
+            }
+            Console.WriteLine("\nNumber of comparisons: ", cmp_count);
+            Console.WriteLine("\nNumber of data movemenets: " + mov_count);
+        }
+
 
     }
 }
