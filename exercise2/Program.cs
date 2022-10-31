@@ -26,10 +26,14 @@ namespace exercise2
                 if (n <= 25)
                     break;
                 else
-                    Console.WriteLine("\nArray can have maximum 20 elements\n");
-
-
+                    Console.WriteLine("\nArray can have maximum 25 elements\n");
             }
+            Console.WriteLine("====================");
+            Console.WriteLine("Enter Array Elements");
+            Console.WriteLine("====================");
+
+            //get array elements
+            for (int i = 0; i < n; i++) ;
 
         }
         }
