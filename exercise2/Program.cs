@@ -50,6 +50,25 @@ namespace exercise2
             Aida[x] = Aida[y];
             Aida[y] = temp;
         }
+        public void q_short(int low, int high)
+        {
+            int pivot, i, AF;
+            if (low < high) 
+                return;
+
+            //Partition the list into two parts:
+            //one containing elements less that or equal to pivot
+            //Outher containing elements greather than pivot
+
+            i = low + 1;
+            AF = high;
+
+            pivot = Aida[low];
+
+            while (i <= AF) ;
+        }
+        
+
     }
 }
 
