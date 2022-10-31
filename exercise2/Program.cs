@@ -12,7 +12,6 @@ namespace exercise2
         private int[] AF = new int[25];
         private int cmp_count = 0; //number of data comparasion
         private int mov_count = 0; //number of data movements
-        
         }
     }
 
