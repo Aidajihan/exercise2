@@ -126,6 +126,13 @@ namespace exercise2
 
             //Declaring the object of the class
             Program myList = new Program();
+            //Acept array elements
+            myList.read();
+            //Display sorted array
+            myList.display();
+            // to exit from the console
+            Console.WriteLine("\n\nPress Enter to exit. ");
+            Console.Read();
 
         }
     }
