@@ -33,9 +33,24 @@ namespace exercise2
             Console.WriteLine("====================");
 
             //get array elements
-            for (int i = 0; i < n; i++) ;
-
+            for (int i = 0; i < Aida.Length; i++)
+            {
+                Console.Write("<" + (Aida.Length + 1) + ">");
+                string s1 = Console.ReadLine();
+                Aida[i] = Int32.Parse(s1);
+            }
         }
+        //swaps the elements at index x with the element at index y
+
+        void swap(int x, int y)
+        {
+            int temp;
+
+            temp = Aida[x];
+            Aida[x] = Aida[y];
+            Aida[y] = temp;
         }
     }
+}
+
 
