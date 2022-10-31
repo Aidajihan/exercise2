@@ -53,9 +53,9 @@ namespace exercise2
         public void q_sort(int low, int high, int mid)
         {
             int pivot, i, AF, k;
-            if (low >= high) 
+            if (low >= high)
                 return;
-            
+
 
             //Partition the list into two parts:
             //one containing elements less that or equal to pivot
@@ -102,7 +102,7 @@ namespace exercise2
                 swap(low, AF);
                 mov_count++;
             }
-           
+
         }
         void display()
         {
@@ -121,8 +121,11 @@ namespace exercise2
         {
             return (n);
         }
+        static void Main(string[] args)
+        {
 
 
+        }
     }
 }
 
