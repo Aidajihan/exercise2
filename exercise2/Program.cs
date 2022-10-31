@@ -117,6 +117,10 @@ namespace exercise2
             Console.WriteLine("\nNumber of comparisons: ", cmp_count);
             Console.WriteLine("\nNumber of data movemenets: " + mov_count);
         }
+        int getSize()
+        {
+            return (n);
+        }
 
 
     }
