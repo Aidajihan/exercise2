@@ -53,19 +53,44 @@ namespace exercise2
         public void q_short(int low, int high)
         {
             int pivot, i, AF;
-            if (low < high) 
+            if (low >= high) 
                 return;
 
             //Partition the list into two parts:
             //one containing elements less that or equal to pivot
             //Outher containing elements greather than pivot
 
-            i = low + 1;
+            i = low;
             AF = high;
 
             pivot = Aida[low];
 
-            while (i <= AF) ;
+            while (i <= AF)
+            {
+                //search for an elements greater than pivot
+                while ((Aida[i] <= pivot) && (i <= high))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                //Search for an element less than or equal to pivot
+                while ((Aida[AF] > pivot) && (AF >= low))
+                {
+                    AF--;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                //if the greater element is on the left of the element
+                if (i < AF)
+                {
+                    //Swap the element at index i whit the element at index j
+                    swap(i, AF);
+                    mov_count++;
+                }
+            }
         }
         
 
